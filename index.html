@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-    <html lang="en" class="h-100">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Afonso's HTML Form</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<html lang="en">
 
-    <body class="h-100 align-middle">
-        <div class="container d-flex justify-content-center">
-            <form class="container flex-column justify-content-center border border-secondary-subtle rounded-3 m-0 p-0 was-validated">
-                <!-- Navbar - Form Header -->
-                <nav  class="navbar bg-light border-bottom border-secondary-subtle">
-                    <div class="container-fluid px-4 py-2">
-                        <span class="fs-3"><strong>Payment form example</strong></span>
-                    </div>
-                </nav>
-                
-                <!-- Warning sign -->
-                <div class="alert alert-danger w-auto d-flex rounded m-3 py-3 mx-4">
-                    <p class="m-0 px-2">Some fields are missing.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afonso's HTML Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <form
+            class="container flex-column justify-content-center border border-secondary-subtle rounded-3 m-0 p-0 was-validated">
+            <!-- Navbar - Form Header -->
+            <div class="bg-secondary-subtle rounded-top-3 border-bottom border-secondary-subtle">
+                <div class="container-fluid px-4 py-2">
+                    <span class="fs-3"><strong>Payment form example</strong></span>
                 </div>
+            </div>
 
-                <!-- Payment Info -->
-                <div class="container-fluid d-flex py-2 mb-3">
-                    <div class="col-md-4 px-3">
+            <!-- Warning sign -->
+            <div class="alert alert-danger w-auto d-flex rounded m-3 py-3 mx-4">
+                <p class="m-0 px-2">Some fields are missing.</p>
+            </div>
+
+            <!-- Payment Info -->
+            <div class="container-fluid d-flex justify-content-center py-2 mb-3">
+                <div class="row d-flex w-100 justify-content-between">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 px-3">
                         <label for="card-number" class="form-label"><strong>Card #</strong></label>
-                        <input type="text" class="form-control" id="card-number" value="" placeholder="XXXX XXXX XXXX XXXX" required>
+                        <input type="text" class="form-control" id="card-number" value=""
+                            placeholder="XXXX XXXX XXXX XXXX" required>
                     </div>
 
-                    <div class="col-md-4 px-3">
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 px-3">
                         <label for="cvc-number" class="form-label"><strong>CVV #</strong></label>
                         <input type="text" class="form-control" id="cvc-number" value="" placeholder="XXXX" required>
                     </div>
 
-                    <div class="col-md-4 px-3">
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 px-3">
                         <label for="amount" class="form-label"><strong>Amount</strong></label>
                         <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
@@ -43,28 +50,34 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- User Info -->
-                <div class="container-fluid d-flex py-2 mb-3">
-                    <div class="col-md-6 px-3">
+            <!-- User Info -->
+            <div class="container-fluid d-flex justify-content-center py-2 mb-3">
+                <div class="row d-flex w-100 justify-content-between">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 px-3">
                         <label for="first-name" class="form-label"><strong>First Name</strong></label>
-                        <input type="text" class="form-control" id="first-name" value="" placeholder="Enter your first name." required>
+                        <input type="text" class="form-control" id="first-name" value=""
+                            placeholder="Enter your first name." required>
                     </div>
 
-                    <div class="col-md-6 px-3">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 px-3">
                         <label for="last-name" class="form-label"><strong>Last Name</strong></label>
-                        <input type="text" class="form-control" id="last-name" value="" placeholder="Enter your last name." required>
+                        <input type="text" class="form-control" id="last-name" value=""
+                            placeholder="Enter your last name." required>
                     </div>
                 </div>
+            </div>
 
-                <!-- Location Info -->
-                <div class="container-fluid d-flex py-2 mb-3">
-                    <div class="col-md-6 px-3">
+            <!-- Location Info -->
+            <div class="container-fluid d-flex justify-content-center py-2 mb-3">
+                <div class="row d-flex w-100 justify-content-between">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 px-3">
                         <label for="city" class="form-label"><strong>City</strong></label>
                         <input type="text" class="form-control" id="city" value="" placeholder="" required>
                     </div>
 
-                    <div class="col-md-3 px-3">
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 px-3">
                         <label for="state" class="form-label"><strong>State</strong></label>
                         <select class="form-select" id="state" required>
                             <option selected disabled value="">Choose your state.</option>
@@ -74,59 +87,74 @@
                         </select>
                     </div>
 
-                    <div class="col-md-3 px-3">
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 px-3">
                         <label for="postal-code" class="form-label"><strong>Postal Code</strong></label>
-                        <input type="text" class="form-control" id="postal-code" value="" placeholder="XXXX-XXX" required>
+                        <input type="text" class="form-control" id="postal-code" value="" placeholder="XXXX-XXX"
+                            required>
                     </div>
                 </div>
+            </div>
 
-                <!-- Payment Option and Message -->
-                <div class="container-fluid d-flex justify-content-between mb-3">
-                    <!--Accepted Payment Options-->
-                    <div class="col-md-6">
-                        <label class="form-label px-3 mt-3" for="payment-type"><strong>We accept:</strong></label>
-                        <div class="col-md-6 mx-3 p-3 mt-3 bg-secondary rounded" id="payment-type">
-                            <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input cicle" type="radio" name="inlineRadioOptions" id="master-card" value="option1" required>
-                                <label class="form-check-label" for="master-card"><i class="fa-brands fa-cc-mastercard fa-xl" style="color: #ffffff;"></i></label>
-                            </div>
-
-                            <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="visa" value="option2" required>
-                                <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-visa fa-xl" style="color: #ffffff;"></i></label>
-                            </div>
-
-                            <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="diners-club" value="option3" required>
-                                <label class="form-check-label" for="diners-club"><i class="fa-brands fa-cc-diners-club fa-xl" style="color: #ffffff;"></i></label>
-                            </div>
-
-                            <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amex" value="option4" required>
-                                <label class="form-check-label" for="amex"><i class="fa-brands fa-cc-amex fa-xl" style="color: #ffffff;"></i></label>
-                            </div>
-                            <div class="invalid-feedback">Select one option.</div>
+            <!-- Payment Option and Message -->
+            <div class="container-fluid d-flex justify-content-center mb-3">
+                <!--Accepted Payment Options-->
+                <div class="row w-100 d-flex justify-content-between">
+                    <label class="form-label px-3 mt-3" for="payment-type"><strong>We accept:</strong></label>
+                    <div class="col-sm-8 col-md-4 col-lg-4 col-xl-4 mx-3 p-2 mt-3 mx-2 bg-secondary rounded" id="payment-type">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input cicle" type="radio" name="inlineRadioOptions"
+                                id="master-card" value="option1" required>
+                            <label class="form-check-label" for="master-card"><i
+                                    class="fa-brands fa-cc-mastercard fa-xl text-white"></i></label>
                         </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="visa"
+                                value="option2" required>
+                            <label class="form-check-label" for="visa"><i
+                                    class="fa-brands fa-cc-visa fa-xl text-white"></i></label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="diners-club"
+                                value="option3" required>
+                            <label class="form-check-label" for="diners-club"><i
+                                    class="fa-brands fa-cc-diners-club fa-xl text-white"></i></label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amex"
+                                value="option4" required>
+                            <label class="form-check-label" for="amex"><i
+                                    class="fa-brands fa-cc-amex fa-xl text-white"></i></label>
+                        </div>
+                        <div class="invalid-feedback">Select one option.</div>
                     </div>
 
+
                     <!--Message-->
-                    <div class="col-md-6 mb-3 p-3">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 mx-0 px-3">
                         <label for="message" class="form-label"><strong>Message</strong></label>
-                        <textarea class="form-control mt-1" id="message" aria-label="With textarea" style="height: 150px"></textarea>
+                        <textarea class="form-control mt-1" id="message" aria-label="With textarea"
+                            style="height: 150px"></textarea>
                         <label for="message" class="form-label mt-1 text-secondary">Add any notes here.</label>
                     </div>
                 </div>
+            </div>
 
-                <!-- Navbar - Form Footer -->
-                <nav  class="navbar bg-light border-top border-secondary-subtle">
-                    <div class="container-fluid d-flex py-2 px-3 justify-content-end">
-                        <input class="btn btn-secondary mx-1 fw-bold" type="reset" value="Reset">
-                        <button type="submit" class="btn btn-primary mx-3"><strong>Send</strong></button>
-                    </div>
-                </nav>
-            </form>
-        </div>
+            <!-- Navbar - Form Footer -->
+            <div class="bg-secondary-subtle rounded-bottom-3 border-top border-secondary-subtle">
+                <div class="container-fluid d-flex py-2 px-3 justify-content-end">
+                    <input class="btn btn-secondary mx-1 fw-bold" type="reset" value="Reset">
+                    <button type="submit" class="btn btn-primary mx-3"><strong>Send</strong></button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
