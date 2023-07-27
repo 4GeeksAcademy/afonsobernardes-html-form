@@ -10,7 +10,7 @@
 
     <body class="h-100 align-middle">
         <div class="container d-flex justify-content-center">
-            <form class="container flex-column justify-content-center border border-secondary-subtle rounded-3 m-0 p-0">
+            <form class="container flex-column justify-content-center border border-secondary-subtle rounded-3 m-0 p-0 was-validated">
                 <!-- Navbar - Form Header -->
                 <nav  class="navbar bg-light border-bottom border-secondary-subtle">
                     <div class="container-fluid px-4 py-2">
@@ -28,24 +28,18 @@
                     <div class="col-md-4 px-3">
                         <label for="card-number" class="form-label"><strong>Card #</strong></label>
                         <input type="text" class="form-control" id="card-number" value="" placeholder="XXXX XXXX XXXX XXXX" required>
-                        <div class="valid-feedback">
-                        Looks good!
-                        </div>
                     </div>
 
                     <div class="col-md-4 px-3">
                         <label for="cvc-number" class="form-label"><strong>CVV #</strong></label>
                         <input type="text" class="form-control" id="cvc-number" value="" placeholder="XXXX" required>
-                        <div class="valid-feedback">
-                        Looks good!
-                        </div>
                     </div>
 
                     <div class="col-md-4 px-3">
                         <label for="amount" class="form-label"><strong>Amount</strong></label>
-                        <input type="text" class="form-control" id="amount" value="" placeholder="Amount" required>
-                        <div class="valid-feedback">
-                        Looks good!
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" id="amount" value="" placeholder="Amount" required>
                         </div>
                     </div>
                 </div>
@@ -55,17 +49,11 @@
                     <div class="col-md-6 px-3">
                         <label for="first-name" class="form-label"><strong>First Name</strong></label>
                         <input type="text" class="form-control" id="first-name" value="" placeholder="Enter your first name." required>
-                        <div class="valid-feedback">
-                        Looks good!
-                        </div>
                     </div>
 
                     <div class="col-md-6 px-3">
                         <label for="last-name" class="form-label"><strong>Last Name</strong></label>
                         <input type="text" class="form-control" id="last-name" value="" placeholder="Enter your last name." required>
-                        <div class="valid-feedback">
-                        Looks good!
-                        </div>
                     </div>
                 </div>
 
@@ -74,60 +62,59 @@
                     <div class="col-md-6 px-3">
                         <label for="city" class="form-label"><strong>City</strong></label>
                         <input type="text" class="form-control" id="city" value="" placeholder="" required>
-                        <div class="valid-feedback">
-                        Looks good!
-                        </div>
                     </div>
 
                     <div class="col-md-3 px-3">
                         <label for="state" class="form-label"><strong>State</strong></label>
-                        <select class="form-select" id="state" aria-label="Default select example" required>
-                            <option selected disabled>Choose your state.</option>
+                        <select class="form-select" id="state" required>
+                            <option selected disabled value="">Choose your state.</option>
                             <option value="1">North</option>
                             <option value="2">Center</option>
                             <option value="3">South</option>
-                          </select>
+                        </select>
                     </div>
 
                     <div class="col-md-3 px-3">
                         <label for="postal-code" class="form-label"><strong>Postal Code</strong></label>
                         <input type="text" class="form-control" id="postal-code" value="" placeholder="XXXX-XXX" required>
-                        <div class="valid-feedback">
-                        Looks good!
-                        </div>
                     </div>
                 </div>
 
                 <!-- Payment Option and Message -->
-                <div class="container-fluid justify-content-between mb-3">
+                <div class="container-fluid d-flex justify-content-between mb-3">
                     <!--Accepted Payment Options-->
                     <div class="col-md-6">
                         <label class="form-label px-3 mt-3" for="payment-type"><strong>We accept:</strong></label>
                         <div class="col-md-6 mx-3 p-3 mt-3 bg-secondary rounded" id="payment-type">
                             <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input cicle" type="radio" name="inlineRadioOptions" id="master-card" value="option1">
+                                <input class="form-check-input cicle" type="radio" name="inlineRadioOptions" id="master-card" value="option1" required>
                                 <label class="form-check-label" for="master-card"><i class="fa-brands fa-cc-mastercard fa-xl" style="color: #ffffff;"></i></label>
                             </div>
 
                             <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="visa" value="option2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="visa" value="option2" required>
                                 <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-visa fa-xl" style="color: #ffffff;"></i></label>
                             </div>
 
                             <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="diners-club" value="option3">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="diners-club" value="option3" required>
                                 <label class="form-check-label" for="diners-club"><i class="fa-brands fa-cc-diners-club fa-xl" style="color: #ffffff;"></i></label>
                             </div>
 
                             <div class="form-check form-check-inline mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amex" value="option4">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amex" value="option4" required>
                                 <label class="form-check-label" for="amex"><i class="fa-brands fa-cc-amex fa-xl" style="color: #ffffff;"></i></label>
                             </div>
+                            <div class="invalid-feedback">Select one option.</div>
                         </div>
                     </div>
 
                     <!--Message-->
-
+                    <div class="col-md-6 mb-3 p-3">
+                        <label for="message" class="form-label"><strong>Message</strong></label>
+                        <textarea class="form-control mt-1" id="message" aria-label="With textarea" style="height: 150px"></textarea>
+                        <label for="message" class="form-label mt-1 text-secondary">Add any notes here.</label>
+                    </div>
                 </div>
 
                 <!-- Navbar - Form Footer -->
