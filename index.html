@@ -1,16 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afonso's HTML Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-    <body>
-        
+    <html lang="en" class="h-100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Afonso's HTML Form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
 
+    <body class="h-100 align-middle">
+        <div class="container d-flex justify-content-center">
+            <form class="container flex-column justify-content-center border border-secondary-subtle rounded-3 m-0 p-0">
+                <!-- Navbar - Form Header -->
+                <nav  class="navbar bg-light border-bottom border-secondary-subtle">
+                    <div class="container-fluid px-4 py-2">
+                        <span class="fs-3"><strong>Payment form example</strong></span>
+                    </div>
+                </nav>
+                
+                <!-- Warning sign -->
+                <div class="alert alert-danger w-auto d-flex rounded m-3 py-3 mx-4">
+                    <p class="m-0 px-2">Some fields are missing.</p>
+                </div>
 
-        
+                <!-- Payment Info -->
+                <div class="container-fluid d-flex py-2 mb-3">
+                    <div class="col-md-4 px-3">
+                        <label for="card-number" class="form-label"><strong>Card #</strong></label>
+                        <input type="text" class="form-control" id="card-number" value="" placeholder="XXXX XXXX XXXX XXXX" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 px-3">
+                        <label for="cvc-number" class="form-label"><strong>CVV #</strong></label>
+                        <input type="text" class="form-control" id="cvc-number" value="" placeholder="XXXX" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 px-3">
+                        <label for="amount" class="form-label"><strong>Amount</strong></label>
+                        <input type="text" class="form-control" id="amount" value="" placeholder="Amount" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Info -->
+                <div class="container-fluid d-flex py-2 mb-3">
+                    <div class="col-md-6 px-3">
+                        <label for="first-name" class="form-label"><strong>First Name</strong></label>
+                        <input type="text" class="form-control" id="first-name" value="" placeholder="Enter your first name." required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 px-3">
+                        <label for="last-name" class="form-label"><strong>Last Name</strong></label>
+                        <input type="text" class="form-control" id="last-name" value="" placeholder="Enter your last name." required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Info -->
+                <div class="container-fluid d-flex py-2 mb-3">
+                    <div class="col-md-6 px-3">
+                        <label for="city" class="form-label"><strong>City</strong></label>
+                        <input type="text" class="form-control" id="city" value="" placeholder="" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 px-3">
+                        <label for="state" class="form-label"><strong>State</strong></label>
+                        <select class="form-select" id="state" aria-label="Default select example" required>
+                            <option selected disabled>Choose your state.</option>
+                            <option value="1">North</option>
+                            <option value="2">Center</option>
+                            <option value="3">South</option>
+                          </select>
+                    </div>
+
+                    <div class="col-md-3 px-3">
+                        <label for="postal-code" class="form-label"><strong>Postal Code</strong></label>
+                        <input type="text" class="form-control" id="postal-code" value="" placeholder="XXXX-XXX" required>
+                        <div class="valid-feedback">
+                        Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Option and Message -->
+                <div class="container-fluid justify-content-between mb-3">
+                    <!--Accepted Payment Options-->
+                    <div class="col-md-6">
+                        <label class="form-label px-3 mt-3" for="payment-type"><strong>We accept:</strong></label>
+                        <div class="col-md-6 mx-3 p-3 mt-3 bg-secondary rounded" id="payment-type">
+                            <div class="form-check form-check-inline mr-5">
+                                <input class="form-check-input" type="checkbox" id="master-card" value="option1">
+                                <label class="form-check-label" for="master-card">MasterCard</label>
+                            </div>
+
+                            <div class="form-check form-check-inline mr-5">
+                                <input class="form-check-input" type="checkbox" id="visa" value="option2">
+                                <label class="form-check-label" for="visa">Visa</label>
+                            </div>
+
+                            <div class="form-check form-check-inline mr-5">
+                                <input class="form-check-input" type="checkbox" id="amex" value="option3">
+                                <label class="form-check-label" for="amex">AMEX</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Message-->
+
+                </div>
+
+                <!-- Navbar - Form Footer -->
+                <nav  class="navbar bg-light border-top border-secondary-subtle">
+                    <div class="container-fluid d-flex py-2 px-3 justify-content-end">
+                        <input class="btn btn-secondary mx-1 fw-bold" type="reset" value="Reset">
+                        <button type="submit" class="btn btn-primary mx-3"><strong>Send</strong></button>
+                    </div>
+                </nav>
+            </form>
+        </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </body>
 </html>
