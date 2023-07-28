@@ -16,7 +16,7 @@
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <form
             class="container flex-column justify-content-center border border-secondary-subtle rounded-3 m-0 p-0 was-validated">
-            <!-- Navbar - Form Header -->
+            <!-- Form Header -->
             <div class="bg-secondary-subtle rounded-top-3 border-bottom border-secondary-subtle">
                 <div class="container-fluid px-4 py-2">
                     <span class="fs-3"><strong>Payment form example</strong></span>
@@ -95,19 +95,18 @@
                 </div>
             </div>
 
-            <!-- Payment Option and Message -->
-            <div class="container-fluid d-flex justify-content-center mb-3">
-                <!--Accepted Payment Options-->
-                <div class="row w-100 d-flex justify-content-between">
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mx-3 p-2 px-0 pt-0" id="payment-type">
-                        <label class="form-label px-0 mt-0" for="payment-type"><strong>We accept:</strong></label>
-                        <div class="input-group container bg-secondary rounded p-3">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="master-card"
-                                    value="option1" required>
-                                <label class="form-check-label" for="master-card"><i
-                                        class="fa-brands fa-cc-mastercard fa-xl text-white"></i></label>
-                            </div>
+        <!-- Payment Option and Message -->
+            <!--Accepted Payment Options-->
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 px-3" id="payment-type">
+                    <p class="form-label mx-3 px-2 mt-0 pb-3" for="payment-type"><strong>We accept:</strong></p>
+                    <span class="bg-secondary rounded p-3 mx-4 px-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="master-card"
+                                value="option1" required>
+                            <label class="form-check-label" for="master-card"><i
+                                    class="fa-brands fa-cc-mastercard fa-xl text-white"></i></label>
+                        </div>
 
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="visa"
@@ -123,28 +122,27 @@
                                         class="fa-brands fa-cc-diners-club fa-xl text-white"></i></label>
                             </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amex"
-                                    value="option4" required>
-                                <label class="form-check-label" for="amex"><i
-                                        class="fa-brands fa-cc-amex fa-xl text-white"></i></label>
-                            </div>
-                            <div class="invalid-feedback">Select one option.</div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="amex"
+                                value="option4" required>
+                            <label class="form-check-label" for="amex"><i
+                                    class="fa-brands fa-cc-amex fa-xl text-white"></i></label>
                         </div>
-                    </div>
-
-
-                    <!--Message-->
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 mx-0 px-3">
-                        <label for="message" class="form-label"><strong>Message</strong></label>
-                        <textarea class="form-control mt-1" id="message" aria-label="With textarea"
-                            style="height: 150px"></textarea>
-                        <label for="message" class="form-label mt-1 text-secondary">Add any notes here.</label>
-                    </div>
+                        <div class="invalid-feedback">Select one option.</div>
+                    </span>
                 </div>
+
+
+                <!--Message-->
+                <span class="col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-3 px-3">
+                    <label for="message" class="form-label"><strong>Message</strong></label>
+                    <textarea class="form-control mt-1" id="message" aria-label="With textarea"
+                        style="height: 150px"></textarea>
+                    <label for="message" class="form-label mt-1 text-secondary">Add any notes here.</label>
+                </span>
             </div>
 
-            <!-- Navbar - Form Footer -->
+            <!-- Form Footer -->
             <div class="bg-secondary-subtle rounded-bottom-3 border-top border-secondary-subtle">
                 <div class="container-fluid d-flex py-2 px-3 justify-content-end">
                     <input class="btn btn-secondary mx-1 fw-bold" type="reset" value="Reset">
